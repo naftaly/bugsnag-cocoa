@@ -61,6 +61,7 @@
 		A1117E572535B22300014FDA /* OOMAutoDetectErrorsScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117E562535B22300014FDA /* OOMAutoDetectErrorsScenario.swift */; };
 		A1117E592535B29800014FDA /* OOMEnabledErrorTypesScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117E582535B29800014FDA /* OOMEnabledErrorTypesScenario.swift */; };
 		A1117E5B2536036400014FDA /* OOMSessionScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1117E5A2536036400014FDA /* OOMSessionScenario.swift */; };
+		AA133FC5270F850A000B394F /* NetworkSoakScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA133FC4270F850A000B394F /* NetworkSoakScenario.swift */; };
 		AAFEF9EA26EB533800980A10 /* NetworkBreadcrumbsScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFEF9E926EB533800980A10 /* NetworkBreadcrumbsScenario.swift */; };
 		CB42FF9026F1EDB500E8D5D2 /* libBugsnagNetworkRequestPluginStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42FF8F26F1EDB500E8D5D2 /* libBugsnagNetworkRequestPluginStatic.a */; };
 		CBB787912578FC0C0071BDE4 /* MarkUnhandledHandledScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB787902578FC0C0071BDE4 /* MarkUnhandledHandledScenario.m */; };
@@ -238,6 +239,7 @@
 		A1117E562535B22300014FDA /* OOMAutoDetectErrorsScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOMAutoDetectErrorsScenario.swift; sourceTree = "<group>"; };
 		A1117E582535B29800014FDA /* OOMEnabledErrorTypesScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOMEnabledErrorTypesScenario.swift; sourceTree = "<group>"; };
 		A1117E5A2536036400014FDA /* OOMSessionScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOMSessionScenario.swift; sourceTree = "<group>"; };
+		AA133FC4270F850A000B394F /* NetworkSoakScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSoakScenario.swift; sourceTree = "<group>"; };
 		AAFEF9E926EB533800980A10 /* NetworkBreadcrumbsScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBreadcrumbsScenario.swift; sourceTree = "<group>"; };
 		AAFEFA0226EB6B5A00980A10 /* BugsnagNetworkRequestPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BugsnagNetworkRequestPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB42FF8F26F1EDB500E8D5D2 /* libBugsnagNetworkRequestPluginStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBugsnagNetworkRequestPluginStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -617,6 +619,7 @@
 				F49695AA244546B000105DA9 /* User */,
 				E75040B324782597005D33BD /* ReleaseStageSessionScenario.swift */,
 				E7B79CD924800A5D0039FB88 /* MetadataMergeScenario.swift */,
+				AA133FC4270F850A000B394F /* NetworkSoakScenario.swift */,
 			);
 			name = scenarios;
 			path = ../../shared/scenarios;
@@ -955,6 +958,7 @@
 				E700EE59247D321B008CFFB6 /* OriginalErrorNSErrorScenario.swift in Sources */,
 				F42953498545B853CC0B635E /* NullPointerScenario.m in Sources */,
 				E75040B02478214F005D33BD /* MetadataRedactionDefaultScenario.swift in Sources */,
+				AA133FC5270F850A000B394F /* NetworkSoakScenario.swift in Sources */,
 				E700EE6C247D793A008CFFB6 /* SIGPIPEScenario.m in Sources */,
 				E700EE50247D15DE008CFFB6 /* UserFromConfigSessionScenario.swift in Sources */,
 				A1117E552535A59100014FDA /* OOMLoadScenario.swift in Sources */,
@@ -1163,7 +1167,7 @@
 					../../../BugsnagNetworkRequestPlugin/BugsnagNetworkRequestPlugin/include,
 				);
 				INFOPLIST_FILE = iOSTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				OTHER_SWIFT_FLAGS = "-Onone";
@@ -1201,7 +1205,7 @@
 					../../../BugsnagNetworkRequestPlugin/BugsnagNetworkRequestPlugin/include,
 				);
 				INFOPLIST_FILE = iOSTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				MTL_ENABLE_DEBUG_INFO = YES;
