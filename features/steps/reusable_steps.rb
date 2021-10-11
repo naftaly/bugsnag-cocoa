@@ -70,3 +70,40 @@ Then('the stacktrace contains methods:') do |table|
   contains = actual.each_cons(expected.length).to_a.include? expected
   assert_true(contains, "Stacktrace methods #{actual} did not contain #{expected}")
 end
+
+# Receives and discards a batch of requests
+Then('I process a batch of {int} {word}') do |count, request_type|
+  list = Maze::Server.list_for(request_type)
+
+  receive_batch count, list
+end
+
+# Receives and discards a batch of requests, waiting until either all expected requests
+# are received, giving up if no new requests are received in a given wait period.
+# If more than the expected number of requests is received, an error is now raised and the
+# requests are left in the list.
+def receive_batch(expected_count, list)
+  timeout = Maze.config.receive_requests_wait
+  received_count = 0
+
+  until received_count >= expected_count
+    # Receive what we can in the usual wait time
+    wait = Maze::Wait.new(timeout: timeout)
+    received = wait.until { list.size >= expected_count }
+
+    if received
+      # Success - discard the requests received
+      $logger.info "list.size is #{list.size} Discarding all"
+      expected_count.times {list.next}
+      received_count = expected_count
+    else
+      # As long as we got something, keep waiting
+      if list.size == received_count
+        fail "No requests received in #{timeout} seconds, giving up"
+      else
+        $logger.info "#{list.size} of #{expected_count} requests received, continuing to wait"
+        received_count = list.size
+      end
+    end
+  end
+end

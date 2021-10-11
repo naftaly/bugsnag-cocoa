@@ -1,7 +1,8 @@
 When('I run {string}') do |event_type|
   steps %(
     Given the element "scenario_name" is present
-    When I send the keys "#{event_type}" to the element "scenario_name"
+    When I clear the element "scenario_name"
+    And I send the keys "#{event_type}" to the element "scenario_name"
     And I close the keyboard
     And I click the element "run_scenario"
   )

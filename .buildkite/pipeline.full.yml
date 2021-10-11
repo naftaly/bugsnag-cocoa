@@ -2,6 +2,32 @@ env:
   LANG: "en_GB.UTF-8"
 
 steps:
+  # BrowserStack Network monitoring
+  - label: 'BrowserStack network monitoring'
+    depends_on:
+      - cocoa_fixture
+    timeout_in_minutes: 40
+    agents:
+      queue: opensource
+    env:
+      STRESS_TEST: "true"
+    plugins:
+      artifacts#v1.3.0:
+        download: ["features/fixtures/ios/output/iOSTestApp.ipa"]
+        upload: ["maze_output/**/*"]
+      docker-compose#v3.3.0:
+        run: cocoa-maze-runner
+        command:
+          - "features/network_soak.feature"
+          - "--app=/app/build/iOSTestApp.ipa"
+          - "--farm=bs"
+          - "--device=IOS_13"
+          - "--appium-version=1.17.0"
+    concurrency: 9
+    concurrency_group: browserstack-app
+    soft_fail:
+      - exit_status: "*"
+
   ##############################################################################
   #
   # E2E tests

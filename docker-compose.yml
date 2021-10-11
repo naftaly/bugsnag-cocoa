@@ -9,6 +9,7 @@ services:
       BUILDKITE_PIPELINE_NAME:
       BROWSER_STACK_USERNAME:
       BROWSER_STACK_ACCESS_KEY:
+      STRESS_TEST:
     volumes:
       - ./features/fixtures/ios/output:/app/build
       - ./features/:/app/features/
