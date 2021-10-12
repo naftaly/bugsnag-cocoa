@@ -1,4 +1,3 @@
-@stress_test
 Feature: Special feature to help monitor the network performance of the test environment.
   The steps could be refactored to avoid repetition, but the output is clearer not doing so.
 
