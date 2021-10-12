@@ -83,27 +83,20 @@ end
 # If more than the expected number of requests is received, an error is now raised and the
 # requests are left in the list.
 def receive_batch(expected_count, list)
-  timeout = Maze.config.receive_requests_wait
   received_count = 0
+  # Receive what we can in the usual wait time
+  wait = Maze::Wait.new(interval: 10, timeout: 600)
+  received = wait.until do
+      items = list.size
+      $logger.info "Received #{items} requests"
+      items >= expected_count
+  end
 
-  until received_count >= expected_count
-    # Receive what we can in the usual wait time
-    wait = Maze::Wait.new(timeout: timeout)
-    received = wait.until { list.size >= expected_count }
-
-    if received
-      # Success - discard the requests received
-      $logger.info "list.size is #{list.size} Discarding all"
-      expected_count.times {list.next}
-      received_count = expected_count
-    else
-      # As long as we got something, keep waiting
-      if list.size == received_count
-        fail "No requests received in #{timeout} seconds, giving up"
-      else
-        $logger.info "#{list.size} of #{expected_count} requests received, continuing to wait"
-        received_count = list.size
-      end
-    end
+  if received
+    # Success - discard the requests received
+    $logger.info "list.size is #{list.size} discarding #{expected_count}"
+    expected_count.times {list.next}
+  else
+    fail "Only received #{list.size} of the requests expected"
   end
 end

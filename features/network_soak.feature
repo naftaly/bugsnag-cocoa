@@ -82,3 +82,82 @@ Feature: Special feature to help monitor the network performance of the test env
     And the log payload field "maxElapsed" is less than 2000
     And I discard the oldest log
 
+    # Batch 11
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 12
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 13
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 14
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 15
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 16
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 17
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 18
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 19
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
+
+    # Batch 20
+    When I run "NetworkSoakScenario"
+    And I process a batch of 60 logs
+    And I wait to receive a log
+    And the log payload field "averageElapsed" is less than 1000
+    And the log payload field "maxElapsed" is less than 2000
+    And I discard the oldest log
