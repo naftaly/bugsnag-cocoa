@@ -40,3 +40,7 @@ steps:
           - "--appium-version=1.17.0"
     concurrency: 9
     concurrency_group: browserstack-app
+    retry:
+      automatic:
+        - exit_status: -1  # Agent was lost
+          limit: 2
