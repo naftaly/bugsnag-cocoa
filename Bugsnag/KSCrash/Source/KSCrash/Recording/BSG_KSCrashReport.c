@@ -848,6 +848,7 @@ void bsg_kscrw_i_writeBasicRegisters(
                          reg);
                 registerName = registerNameBuff;
             }
+            BSG_KSLOG_ERROR("%s: %p", registerName, (void*)bsg_ksmachregisterValue(machineContext, reg));
             writer->addUIntegerElement(
                 writer, registerName,
                 bsg_ksmachregisterValue(machineContext, reg));
@@ -1126,6 +1127,7 @@ void bsg_kscrw_i_writeBinaryImage(const BSG_KSCrashReportWriter *const writer,
         writer->addIntegerElement(writer, BSG_KSCrashField_CPUSubType,               img->header->cpusubtype);
     }
     writer->endContainer(writer);
+        BSG_KSLOG_ERROR("### IMG %p, %p, size %llx, name %s", img->header, (void*)img->imageVmAddr, img->imageSize, img->name);
 }
 
 /** Write information about all images to the report.

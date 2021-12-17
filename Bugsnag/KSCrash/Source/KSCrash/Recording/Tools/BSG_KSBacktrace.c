@@ -27,6 +27,7 @@
 #include "BSG_KSBacktrace_Private.h"
 
 #include "BSG_KSMach.h"
+#include "BSG_KSLogger.h"
 
 /**
  * Mask to strip pointer authentication codes from pointers on Arm64e
@@ -118,6 +119,11 @@ int bsg_ksbt_backtraceThreadState(
         const uintptr_t instructionAddress =
             bsg_ksmachinstructionAddress(machineContext);
         backtraceBuffer[i] = instructionAddress;
+#if defined (__x86_64__)
+        if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__r11;
+#elif defined(__arm64__)
+        if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__x[17];
+#endif
         i++;
 
         if (i == maxEntries) {
