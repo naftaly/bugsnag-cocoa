@@ -123,6 +123,8 @@ int bsg_ksbt_backtraceThreadState(
         if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__r11;
 #elif defined(__arm64__)
         if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__x[17];
+#elif defined(__arm__)
+        if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__r[10];
 #endif
         i++;
 
