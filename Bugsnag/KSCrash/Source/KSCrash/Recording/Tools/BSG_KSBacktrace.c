@@ -124,7 +124,7 @@ int bsg_ksbt_backtraceThreadState(
 #elif defined(__arm64__)
         if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__x[17];
 #elif defined(__arm__)
-        if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__r[10];
+        if (instructionAddress == 0xdeadbeef) backtraceBuffer[i] = machineContext->__ss.__ip;
 #endif
         i++;
 
