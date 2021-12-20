@@ -29,8 +29,8 @@ class NetworkBreadcrumbsScenario : Scenario {
 
     override func run() {
         // Make some network requests so that automatic network breadcrumbs are left
-        query(string: "/reflect/?status=444&password=T0p5ecr3t")
-        query(string: "/reflect/?delay_ms=3000")
+        query(address: "http://maze-local:9340/reflect/?status=444&password=T0p5ecr3t")
+        query(address: "http://maze-local:9340/reflect/?delay_ms=3000")
 
         // Send a handled error
         let error = NSError(domain: "NetworkBreadcrumbsScenario", code: 100, userInfo: nil)
