@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   cocoa-maze-runner:
-    image: 855461928731.dkr.ecr.us-west-1.amazonaws.com/maze-runner-releases:latest-v6-cli
+    image: 855461928731.dkr.ecr.us-west-1.amazonaws.com/maze-runner:integration-bitbar-cli
     environment:
       DEBUG:
       VERBOSE:
@@ -23,3 +23,6 @@ services:
       - ./features/fixtures/ios/output:/app/build
       - ./features/:/app/features/
       - ./maze_output:/app/maze_output
+    env_file: $DOCKER_ENV_FILE
+    extra_hosts:
+      - "maze-local:127.0.0.1"
