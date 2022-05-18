@@ -451,6 +451,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB3B7F9F2832709000CAD67A /* Build configuration list for PBXNativeTarget "BugsnagNetworkRequestPlugin-watchOS" */;
 			buildPhases = (
+				CB26E9C828352466005A1865 /* ShellScript */,
 				CB3B7F872832709000CAD67A /* Headers */,
 				CB3B7F882832709000CAD67A /* Sources */,
 				CB3B7F892832709000CAD67A /* Frameworks */,
@@ -728,6 +729,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB26E9C828352466005A1865 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nset\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01DC339D2733FC9A005B2BDD /* Sources */ = {
