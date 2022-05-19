@@ -1,7 +1,7 @@
 version: '3.6'
 services:
   cocoa-maze-runner:
-    image: 855461928731.dkr.ecr.us-west-1.amazonaws.com/maze-runner-releases:latest-v6-cli
+    image: 855461928731.dkr.ecr.us-west-1.amazonaws.com/maze-runner:reporting-cli
     environment:
       DEBUG:
       VERBOSE:
@@ -19,6 +19,7 @@ services:
       MAZE_BUGSNAG_API_KEY:
       BROWSER_STACK_USERNAME:
       BROWSER_STACK_ACCESS_KEY:
+      MAZE_TMS_URI:
     volumes:
       - ./features/fixtures/ios/output:/app/build
       - ./features/:/app/features/
