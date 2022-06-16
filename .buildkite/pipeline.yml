@@ -225,7 +225,7 @@ steps:
     plugins:
       artifacts#v1.5.0:
         download: "features/fixtures/ios/output/ipa_url.txt"
-        upload: "maze_output/failed/**/*"
+        upload: "maze_output/**/*"
       docker-compose#v3.7.0:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
@@ -254,7 +254,7 @@ steps:
     plugins:
       artifacts#v1.5.0:
         download: "features/fixtures/ios/output/ipa_url.txt"
-        upload: "maze_output/failed/**/*"
+        upload: "maze_output/**/*"
       docker-compose#v3.7.0:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
@@ -283,7 +283,7 @@ steps:
     plugins:
       artifacts#v1.5.0:
         download: "features/fixtures/ios/output/ipa_url.txt"
-        upload: "maze_output/failed/**/*"
+        upload: "maze_output/**/*"
       docker-compose#v3.7.0:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
@@ -312,7 +312,7 @@ steps:
     plugins:
       artifacts#v1.5.0:
         download: "features/fixtures/ios/output/ipa_url.txt"
-        upload: "maze_output/failed/**/*"
+        upload: "maze_output/**/*"
       docker-compose#v3.7.0:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
@@ -342,7 +342,7 @@ steps:
         download: "features/fixtures/macos/output/macOSTestApp.zip"
         upload:
           - "macOSTestApp.log"
-          - "maze_output/failed/**/*"
+          - "maze_output/**/*"
     commands:
       - bundle install
       - bundle exec maze-runner
@@ -362,7 +362,7 @@ steps:
     plugins:
       artifacts#v1.5.0:
         download: ["features/fixtures/macos/output/macOSTestApp.zip"]
-        upload: ["macOSTestApp.log", "maze_output/failed/**/*"]
+        upload: ["macOSTestApp.log", "maze_output/**/*"]
     commands:
       - bundle install
       - bundle exec maze-runner
@@ -383,7 +383,7 @@ steps:
         download: "features/fixtures/macos/output/macOSTestApp.zip"
         upload:
           - "macOSTestApp.log"
-          - "maze_output/failed/**/*"
+          - "maze_output/**/*"
     commands:
       - bundle config set --local path 'vendor/bundle'
       - bundle install
