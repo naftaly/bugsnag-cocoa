@@ -21,8 +21,8 @@ end
 When('I kill and relaunch the app') do
   case Maze::Helper.get_current_platform
   when 'ios'
-    Maze.driver.close_app
-    Maze.driver.launch_app
+    Maze.driver.terminate_app Maze.driver.app_id
+    Maze.driver.activate_app Maze.driver.app_id
   when 'macos'
     # noop
   when 'watchos'
