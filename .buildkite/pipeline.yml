@@ -230,14 +230,14 @@ steps:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
         command:
-          --app=/app/build/iOSTestApp.ipa
-          --farm=bb
-          --device=IOS_14
-          --order=random
-          --os=iOS
-          --os-version=14.0
-          --app-bundle-id=com.bugsnag.iOSTestApp
-    concurrency: 24
+          - --app=/app/build/iOSTestApp.ipa
+          - --farm=bb
+          - --device=IOS_14
+          - --order=random
+          - --os=iOS
+          - --os-version=14.0
+          - --app-bundle-id=com.bugsnag.iOSTestApp
+    concurrency: 2
     concurrency_group: bitbar-ios-14
     concurrency_method: eager
     retry:
