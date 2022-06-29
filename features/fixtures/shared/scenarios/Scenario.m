@@ -7,10 +7,10 @@
 #import <objc/runtime.h>
 
 #if TARGET_OS_IOS
-#define MAZE_RUNNER_URL "http://bs-local.com:9339"
+#define MAZE_RUNNER_URL "http://maze-local:9339"
 #define SWIFT_MODULE "iOSTestApp"
 #elif TARGET_OS_OSX
-#define MAZE_RUNNER_URL "http://localhost:9339"
+#define MAZE_RUNNER_URL "http://maze-local:9339"
 #define SWIFT_MODULE "macOSTestApp"
 #elif TARGET_OS_WATCH
 #import "watchos_maze_host.h"
