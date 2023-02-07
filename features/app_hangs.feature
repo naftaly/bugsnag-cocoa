@@ -181,7 +181,10 @@ Feature: App hangs
     And the exception "message" equals "The app's main thread failed to respond to an event within 2000 milliseconds"
     And the exception "type" equals "cocoa"
 
+
   @skip_macos
+  # PLAT-9633
+  @skip_bitbar
   Scenario: Background app hangs should be reported if reportBackgroundAppHangs = true
     When I run "ReportBackgroundAppHangScenario"
     And I send the app to the background for 3 seconds
