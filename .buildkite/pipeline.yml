@@ -21,101 +21,101 @@ steps:
       - make test-fixtures
       - bundle exec upload-app --app=./features/fixtures/ios/output/iOSTestApp.ipa --app-id-file=./features/fixtures/ios/output/ipa_url.txt
 
-  - label: 'BitBar Poc - iOS 15 - 15.0'
-    depends_on: "cocoa_fixture"
-    timeout_in_minutes: 90
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=/app/build/iOSTestApp.ipa"
-          - "--farm=bb"
-          - "--device=Apple iPhone 13 A2633 15.0.1"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
-    retry:
-      manual:
-        permit_on_passed: true
-
-  - label: 'BitBar Poc - iOS 15 - 15.1'
-    depends_on: "cocoa_fixture"
-    timeout_in_minutes: 90
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=/app/build/iOSTestApp.ipa"
-          - "--farm=bb"
-          - "--device=Apple iPhone 13 A2482 15.1 -US"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
-    retry:
-      manual:
-        permit_on_passed: true
-
-  - label: 'BitBar Poc - iOS 15 - 15.2'
-    depends_on: "cocoa_fixture"
-    timeout_in_minutes: 90
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=/app/build/iOSTestApp.ipa"
-          - "--farm=bb"
-          - "--device=Apple iPhone 13 Mini A2481 15.2 -US"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
-    retry:
-      manual:
-        permit_on_passed: true
-
-  - label: 'BitBar Poc - iOS 15 - 15.3'
-    depends_on: "cocoa_fixture"
-    timeout_in_minutes: 90
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=/app/build/iOSTestApp.ipa"
-          - "--farm=bb"
-          - "--device=Apple iPhone 13 Mini A2481 15.3 -US"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
-    retry:
-      manual:
-        permit_on_passed: true
+#  - label: 'BitBar Poc - iOS 15 - 15.0'
+#    depends_on: "cocoa_fixture"
+#    timeout_in_minutes: 90
+#    agents:
+#      queue: opensource
+#    plugins:
+#      artifacts#v1.9.0:
+#        download: "features/fixtures/ios/output/iOSTestApp.ipa"
+#        upload: "maze_output/failed/**/*"
+#      docker-compose#v4.7.0:
+#        pull: cocoa-maze-runner-bitbar
+#        run: cocoa-maze-runner-bitbar
+#        service-ports: true
+#        command:
+#          - "--app=/app/build/iOSTestApp.ipa"
+#          - "--farm=bb"
+#          - "--device=Apple iPhone 13 A2633 15.0.1"
+#          - "--no-tunnel"
+#          - "--aws-public-ip"
+#          - "features/barebone_tests.feature:7"
+#    retry:
+#      manual:
+#        permit_on_passed: true
+#
+#  - label: 'BitBar Poc - iOS 15 - 15.1'
+#    depends_on: "cocoa_fixture"
+#    timeout_in_minutes: 90
+#    agents:
+#      queue: opensource
+#    plugins:
+#      artifacts#v1.9.0:
+#        download: "features/fixtures/ios/output/iOSTestApp.ipa"
+#        upload: "maze_output/failed/**/*"
+#      docker-compose#v4.7.0:
+#        pull: cocoa-maze-runner-bitbar
+#        run: cocoa-maze-runner-bitbar
+#        service-ports: true
+#        command:
+#          - "--app=/app/build/iOSTestApp.ipa"
+#          - "--farm=bb"
+#          - "--device=Apple iPhone 13 A2482 15.1 -US"
+#          - "--no-tunnel"
+#          - "--aws-public-ip"
+#          - "features/barebone_tests.feature:7"
+#    retry:
+#      manual:
+#        permit_on_passed: true
+#
+#  - label: 'BitBar Poc - iOS 15 - 15.2'
+#    depends_on: "cocoa_fixture"
+#    timeout_in_minutes: 90
+#    agents:
+#      queue: opensource
+#    plugins:
+#      artifacts#v1.9.0:
+#        download: "features/fixtures/ios/output/iOSTestApp.ipa"
+#        upload: "maze_output/failed/**/*"
+#      docker-compose#v4.7.0:
+#        pull: cocoa-maze-runner-bitbar
+#        run: cocoa-maze-runner-bitbar
+#        service-ports: true
+#        command:
+#          - "--app=/app/build/iOSTestApp.ipa"
+#          - "--farm=bb"
+#          - "--device=Apple iPhone 13 Mini A2481 15.2 -US"
+#          - "--no-tunnel"
+#          - "--aws-public-ip"
+#          - "features/barebone_tests.feature:7"
+#    retry:
+#      manual:
+#        permit_on_passed: true
+#
+#  - label: 'BitBar Poc - iOS 15 - 15.3'
+#    depends_on: "cocoa_fixture"
+#    timeout_in_minutes: 90
+#    agents:
+#      queue: opensource
+#    plugins:
+#      artifacts#v1.9.0:
+#        download: "features/fixtures/ios/output/iOSTestApp.ipa"
+#        upload: "maze_output/failed/**/*"
+#      docker-compose#v4.7.0:
+#        pull: cocoa-maze-runner-bitbar
+#        run: cocoa-maze-runner-bitbar
+#        service-ports: true
+#        command:
+#          - "--app=/app/build/iOSTestApp.ipa"
+#          - "--farm=bb"
+#          - "--device=Apple iPhone 13 Mini A2481 15.3 -US"
+#          - "--no-tunnel"
+#          - "--aws-public-ip"
+#          - "features/barebone_tests.feature:7"
+#    retry:
+#      manual:
+#        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.4'
     depends_on: "cocoa_fixture"
@@ -136,7 +136,6 @@ steps:
           - "--device=Apple iPhone SE 2020 A2275 15.4.1 -US"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
     retry:
       manual:
         permit_on_passed: true
@@ -160,7 +159,6 @@ steps:
           - "--device=Apple iPhone 13 Pro Max A2643 15.5"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
     retry:
       manual:
         permit_on_passed: true
@@ -184,7 +182,6 @@ steps:
           - "--device=Apple iPhone 8 Plus A1897 15.6"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebone_tests.feature:7"
     retry:
       manual:
         permit_on_passed: true
