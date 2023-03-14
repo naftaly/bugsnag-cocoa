@@ -39,8 +39,6 @@ steps:
       artifacts#v1.5.0:
         upload: "features/fixtures/carthage/carthage-*.log"
 
-
-
   - label: 'BitBar Poc - iOS 15 - 15.0'
     depends_on: "cocoa_fixture"
     timeout_in_minutes: 90
@@ -60,10 +58,10 @@ steps:
           - "--device=Apple iPhone 13 A2633 15.0.1"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.1'
     depends_on: "cocoa_fixture"
@@ -84,10 +82,10 @@ steps:
           - "--device=Apple iPhone 13 A2482 15.1 -US"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.2'
     depends_on: "cocoa_fixture"
@@ -108,10 +106,10 @@ steps:
           - "--device=Apple iPhone 13 A2482 15.2 -US"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.3'
     depends_on: "cocoa_fixture"
@@ -132,10 +130,10 @@ steps:
           - "--device=Apple iPhone 13 Mini A2481 15.3 -US"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.4'
     depends_on: "cocoa_fixture"
@@ -156,10 +154,10 @@ steps:
           - "--device=Apple iPhone 7 A1778 15.4.1"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.5'
     depends_on: "cocoa_fixture"
@@ -180,10 +178,10 @@ steps:
           - "--device=Apple iPhone 13 Pro Max A2643 15.5"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
 
   - label: 'BitBar Poc - iOS 15 - 15.6'
     depends_on: "cocoa_fixture"
@@ -204,7 +202,7 @@ steps:
           - "--device=Apple iPhone 8 Plus A1897 15.6"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/barebones_tests.feature:7"
-    concurrency: 5
-    concurrency_group: 'bitbar-ios-15'
-    concurrency_method: eager
+          - "features/barebone_tests.feature:7"
+    retry:
+      manual:
+        permit_on_passed: true
