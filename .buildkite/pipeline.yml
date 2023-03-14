@@ -85,7 +85,7 @@ steps:
         command:
           - "--app=/app/build/iOSTestApp.ipa"
           - "--farm=bb"
-          - "--device=Apple iPhone 13 A2482 15.2 -US"
+          - "--device=Apple iPhone 13 Mini A2481 15.2 -US"
           - "--no-tunnel"
           - "--aws-public-ip"
           - "features/barebone_tests.feature:7"
@@ -133,7 +133,7 @@ steps:
         command:
           - "--app=/app/build/iOSTestApp.ipa"
           - "--farm=bb"
-          - "--device=Apple iPhone 7 A1778 15.4.1"
+          - "--device=Apple iPhone SE 2020 A2275 15.4.1 -US"
           - "--no-tunnel"
           - "--aws-public-ip"
           - "features/barebone_tests.feature:7"
