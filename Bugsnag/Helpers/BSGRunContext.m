@@ -395,6 +395,11 @@ static void UpdateHostMemory(void) {
 }
 
 static void UpdateTaskMemory(void) {
+
+
+    bsg_log_debug(@"SKW UpdateTaskMemory start");
+
+
     task_vm_info_data_t task_vm = {0};
     mach_msg_type_number_t count = TASK_VM_INFO_COUNT;
     kern_return_t kr = task_info(current_task(), TASK_VM_INFO,
@@ -402,8 +407,10 @@ static void UpdateTaskMemory(void) {
     if (kr != KERN_SUCCESS) {
         bsg_log_debug(@"task_info: %d", kr);
         return;
+    } else {
+        bsg_log_debug(@"SKW KERN_SUCCESS");
     }
-    
+
     unsigned long long footprint = task_vm.phys_footprint;
     ATOMIC_SET(bsg_runContext->memoryFootprint, footprint);
     
