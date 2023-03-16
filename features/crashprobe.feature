@@ -3,6 +3,8 @@ Feature: Reporting crash events
   Background:
     Given I clear all persistent data
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Executing privileged instruction
     When I run "PrivilegedInstructionScenario" and relaunch the crashed app
     And I configure Bugsnag for "PrivilegedInstructionScenario"
@@ -18,6 +20,8 @@ Feature: Reporting crash events
     And on x86, the "isLR" of stack frame 1 is null
     And on x86, the "isPC" of stack frame 1 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Calling __builtin_trap()
     When I run "BuiltinTrapScenario" and relaunch the crashed app
     And I configure Bugsnag for "BuiltinTrapScenario"
@@ -58,6 +62,8 @@ Feature: Reporting crash events
     And the "isPC" of stack frame 0 is null
     And the "isLR" of stack frame 0 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Trigger a crash after overwriting the link register
     When I run "OverwriteLinkRegisterScenario" and relaunch the crashed app
     And I configure Bugsnag for "OverwriteLinkRegisterScenario"
@@ -72,6 +78,8 @@ Feature: Reporting crash events
     And on arm, the "isLR" of stack frame 1 is true
     And on x86, the "isLR" of stack frame 1 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Attempt to write into a read-only page
     When I run "ReadOnlyPageScenario" and relaunch the crashed app
     And I configure Bugsnag for "ReadOnlyPageScenario"
@@ -119,6 +127,8 @@ Feature: Reporting crash events
     And on arm, the "isLR" of stack frame 1 is true
     And on x86, the "isLR" of stack frame 1 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Attempt to execute an instruction undefined on the current architecture
     When I run "UndefinedInstructionScenario" and relaunch the crashed app
     And I configure Bugsnag for "UndefinedInstructionScenario"
@@ -173,6 +183,8 @@ Feature: Reporting crash events
     And on x86, the "isPC" of stack frame 1 is null
     And on x86, the "isLR" of stack frame 1 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Dereference a null pointer
     When I run "NullPointerScenario" and relaunch the crashed app
     And I configure Bugsnag for "NullPointerScenario"
@@ -210,6 +222,8 @@ Feature: Reporting crash events
     And on arm, the "isLR" of stack frame 1 is true
     And on x86, the "isLR" of stack frame 1 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Trigger a crash with simulated malloc() lock held
     When I run "AsyncSafeMallocScenario" and relaunch the crashed app
     And I configure Bugsnag for "AsyncSafeMallocScenario"
@@ -221,6 +235,8 @@ Feature: Reporting crash events
     And on arm, the "isLR" of stack frame 1 is true
     And on x86, the "isLR" of stack frame 1 is null
 
+  # TODO Pending PLAT-9888
+  @skip_bitbar
   Scenario: Read a garbage pointer
     When I run "ReadGarbagePointerScenario" and relaunch the crashed app
     And I configure Bugsnag for "ReadGarbagePointerScenario"

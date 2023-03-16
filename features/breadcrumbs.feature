@@ -19,12 +19,14 @@ Feature: Attaching a series of notable events leading up to errors
     Then the event has a "log" breadcrumb named "Noisy event"
     And the event has a "process" breadcrumb named "Important event"
 
-  Scenario: An app lauches and subsequently sends a manual event using notify()
+  Scenario: An app launches and subsequently sends a manual event using notify()
     When I run "HandledErrorScenario"
     And I wait to receive an error
     Then the event has a "state" breadcrumb named "Bugsnag loaded"
 
-  Scenario: An app lauches and subsequently crashes
+  # TODO Pending PLAT-9887
+  @skip_bitbar
+  Scenario: An app launches and subsequently crashes
     When I run "BuiltinTrapScenario" and relaunch the crashed app
     And I configure Bugsnag for "BuiltinTrapScenario"
     And I wait to receive an error
