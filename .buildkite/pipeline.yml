@@ -6,13 +6,12 @@ steps:
   #
   # 6.25.2
   #
-  - label: 'iOS 15.0'
+  - label: 'Release 6.25.2 iOS 15.0'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -29,13 +28,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.1'
+  - label: 'Release 6.25.2 iOS 15.1'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -52,13 +50,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.2'
+  - label: 'Release 6.25.2 iOS 15.2'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -76,13 +73,12 @@ steps:
         permit_on_passed: true
 
 
-  - label: 'iOS 15.3'
+  - label: 'Release 6.25.2 iOS 15.3'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -99,14 +95,12 @@ steps:
       manual:
         permit_on_passed: true
 
-
-  - label: 'iOS 15.4'
+  - label: 'Release 6.25.2 iOS 15.4'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -124,13 +118,12 @@ steps:
         permit_on_passed: true
 
 
-  - label: 'iOS 15.5'
+  - label: 'Release 6.25.2 iOS 15.5'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -147,13 +140,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.6'
+  - label: 'Release 6.25.2 iOS 15.6'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -173,13 +165,12 @@ steps:
   #
   # 6.26.0
   #
-  - label: 'iOS 15.0'
+  - label: 'Release 6.26.0 iOS 15.0'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -196,13 +187,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.1'
+  - label: 'Release 6.26.0 iOS 15.1'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -219,13 +209,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.2'
+  - label: 'Release 6.26.0 iOS 15.2'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -242,13 +231,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.3'
+  - label: 'Release 6.26.0 iOS 15.3'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -265,13 +253,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.4'
+  - label: 'Release 6.26.0 iOS 15.4'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -288,13 +275,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.5'
+  - label: 'Release 6.26.0 iOS 15.5'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
@@ -311,13 +297,12 @@ steps:
       manual:
         permit_on_passed: true
 
-  - label: 'iOS 15.6'
+  - label: 'Release 6.26.0 iOS 15.6'
     timeout_in_minutes: 90
     agents:
       queue: opensource
     plugins:
       artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/iOSTestApp.ipa"
         upload: "maze_output/**/*"
       docker-compose#v4.7.0:
         pull: cocoa-maze-runner-bitbar
