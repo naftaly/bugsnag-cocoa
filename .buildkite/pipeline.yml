@@ -23,10 +23,13 @@ steps:
           - "--device=IOS_15_0"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.25.2 iOS 15.1'
     timeout_in_minutes: 90
@@ -45,10 +48,13 @@ steps:
           - "--device=IOS_15_1"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.25.2 iOS 15.2'
     timeout_in_minutes: 90
@@ -67,11 +73,13 @@ steps:
           - "--device=IOS_15_2"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
-
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.25.2 iOS 15.3'
     timeout_in_minutes: 90
@@ -90,10 +98,13 @@ steps:
           - "--device=IOS_15_3"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.25.2 iOS 15.4'
     timeout_in_minutes: 90
@@ -112,11 +123,13 @@ steps:
           - "--device=IOS_15_4"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
-
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.25.2 iOS 15.5'
     timeout_in_minutes: 90
@@ -135,10 +148,13 @@ steps:
           - "--device=IOS_15_5"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.25.2 iOS 15.6'
     timeout_in_minutes: 90
@@ -157,10 +173,13 @@ steps:
           - "--device=IOS_15_6"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   #
   # 6.26.0
@@ -182,10 +201,13 @@ steps:
           - "--device=IOS_15_0"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.26.0 iOS 15.1'
     timeout_in_minutes: 90
@@ -204,10 +226,13 @@ steps:
           - "--device=IOS_15_1"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.26.0 iOS 15.2'
     timeout_in_minutes: 90
@@ -226,10 +251,13 @@ steps:
           - "--device=IOS_15_2"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.26.0 iOS 15.3'
     timeout_in_minutes: 90
@@ -248,10 +276,13 @@ steps:
           - "--device=IOS_15_3"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.26.0 iOS 15.4'
     timeout_in_minutes: 90
@@ -270,10 +301,13 @@ steps:
           - "--device=IOS_15_4"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.26.0 iOS 15.5'
     timeout_in_minutes: 90
@@ -292,10 +326,13 @@ steps:
           - "--device=IOS_15_5"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
 
   - label: 'Release 6.26.0 iOS 15.6'
     timeout_in_minutes: 90
@@ -314,7 +351,10 @@ steps:
           - "--device=IOS_15_6"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/crashprobe.feature:6"
+          - "features/crashprobe.feature"
     retry:
       manual:
         permit_on_passed: true
+    concurrency: 10
+    concurrency_group: 'bitbar-app'
+    concurrency_method: eager
