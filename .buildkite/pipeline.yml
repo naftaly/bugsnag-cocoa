@@ -75,8 +75,7 @@ steps:
           - "--device=IOS_15_2"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/context.feature"
-          - "features/crashprobe.feature"
+          - "--fail-fast"
     retry:
       manual:
         permit_on_passed: true
@@ -101,8 +100,7 @@ steps:
           - "--device=IOS_15_3"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/context.feature"
-          - "features/crashprobe.feature"
+          - "--fail-fast"
     retry:
       manual:
         permit_on_passed: true
@@ -127,8 +125,7 @@ steps:
           - "--device=IOS_15_4"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/context.feature"
-          - "features/crashprobe.feature"
+          - "--fail-fast"
     retry:
       manual:
         permit_on_passed: true
@@ -153,8 +150,7 @@ steps:
           - "--device=IOS_15_5"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/context.feature"
-          - "features/crashprobe.feature"
+          - "--fail-fast"
     retry:
       manual:
         permit_on_passed: true
@@ -179,8 +175,7 @@ steps:
           - "--device=IOS_15_6"
           - "--no-tunnel"
           - "--aws-public-ip"
-          - "features/context.feature"
-          - "features/crashprobe.feature"
+          - "--fail-fast"
     retry:
       manual:
         permit_on_passed: true
