@@ -303,6 +303,7 @@ steps:
         command:
           - "--app=/app/build/iOSTestApp.ipa"
           - "--farm=bb"
+          - "--appium-version=2.0"
           - "--device=IOS_16"
           - "--no-tunnel"
           - "--aws-public-ip"
@@ -334,6 +335,7 @@ steps:
         command:
           - "--app=/app/build/iOSTestApp.ipa"
           - "--farm=bb"
+          - "--appium-version=2.0"
           - "--device=IOS_16"
           - "--no-tunnel"
           - "--aws-public-ip"
