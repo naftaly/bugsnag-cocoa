@@ -21,9 +21,17 @@ class CommandReaderThread: Thread {
             Scenario.baseMazeAddress = self.loadMazeRunnerAddress()
         }
         
+        var isRunningCommand = false
+
         while true {
-            Scenario.executeMazeRunnerCommand() { scenarioName, eventMode in
-                self.action(scenarioName, eventMode)
+            if isRunningCommand {
+                log("Note: Current mazerunner command is not finished executing yet. Waiting 1 second more...")
+            } else {
+                isRunningCommand = true
+                Scenario.executeMazeRunnerCommand() { scenarioName, eventMode in
+                    self.action(scenarioName, eventMode)
+                    isRunningCommand = false
+                }
             }
             Thread.sleep(forTimeInterval: 1)
         }
