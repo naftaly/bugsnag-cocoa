@@ -53,7 +53,7 @@ steps:
         - exit_status: -1  # Agent was lost
           limit: 2
 
-  - label: ':bitbar: iOS 14 E2E tests batch 2'
+  - label: ':bitbar: iOS 14 E2E tests batch 1'
     depends_on:
       - cocoa_fixture
     timeout_in_minutes: 60
@@ -74,7 +74,7 @@ steps:
           - "--no-tunnel"
           - "--aws-public-ip"
           - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
+          - "--exclude=features/[e-z].*.feature$"
     concurrency: 25
     concurrency_group: 'bitbar'
     concurrency_method: eager
@@ -113,7 +113,7 @@ steps:
         - exit_status: -1  # Agent was lost
           limit: 2
 
-  - label: ':bitbar: iOS 14 E2E tests batch 2'
+  - label: ':bitbar: iOS 15 E2E tests batch 1'
     depends_on:
       - cocoa_fixture
     timeout_in_minutes: 60
@@ -130,71 +130,11 @@ steps:
         command:
           - "--app=@/app/build/ipa_url_bb.txt"
           - "--farm=bb"
-          - "--device=IOS_14"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 14 E2E tests batch 1'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_14"
+          - "--device=IOS_15"
           - "--no-tunnel"
           - "--aws-public-ip"
           - "--fail-fast"
           - "--exclude=features/[e-z].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 14 E2E tests batch 2'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_14"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
     concurrency: 25
     concurrency_group: 'bitbar'
     concurrency_method: eager
@@ -233,36 +173,6 @@ steps:
         - exit_status: -1  # Agent was lost
           limit: 2
 
-  - label: ':bitbar: iOS 15 E2E tests batch 2'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_15"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
   - label: ':bitbar: iOS 15 E2E tests batch 1'
     depends_on:
       - cocoa_fixture
@@ -293,7 +203,7 @@ steps:
         - exit_status: -1  # Agent was lost
           limit: 2
 
-  - label: ':bitbar: iOS 15 E2E tests batch 2'
+  - label: ':bitbar: iOS 16 E2E tests batch 1'
     depends_on:
       - cocoa_fixture
     timeout_in_minutes: 60
@@ -310,71 +220,11 @@ steps:
         command:
           - "--app=@/app/build/ipa_url_bb.txt"
           - "--farm=bb"
-          - "--device=IOS_15"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 15 E2E tests batch 1'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_15"
+          - "--device=IOS_16"
           - "--no-tunnel"
           - "--aws-public-ip"
           - "--fail-fast"
           - "--exclude=features/[e-z].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 15 E2E tests batch 2'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_15"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
     concurrency: 25
     concurrency_group: 'bitbar'
     concurrency_method: eager
@@ -413,36 +263,6 @@ steps:
         - exit_status: -1  # Agent was lost
           limit: 2
 
-  - label: ':bitbar: iOS 16 E2E tests batch 2'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_16"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
   - label: ':bitbar: iOS 16 E2E tests batch 1'
     depends_on:
       - cocoa_fixture
@@ -465,96 +285,6 @@ steps:
           - "--aws-public-ip"
           - "--fail-fast"
           - "--exclude=features/[e-z].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 16 E2E tests batch 2'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_16"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 16 E2E tests batch 1'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_16"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[e-z].*.feature$"
-    concurrency: 25
-    concurrency_group: 'bitbar'
-    concurrency_method: eager
-    retry:
-      automatic:
-        - exit_status: -1  # Agent was lost
-          limit: 2
-
-  - label: ':bitbar: iOS 16 E2E tests batch 2'
-    depends_on:
-      - cocoa_fixture
-    timeout_in_minutes: 60
-    agents:
-      queue: opensource
-    plugins:
-      artifacts#v1.9.0:
-        download: "features/fixtures/ios/output/ipa_url_bb.txt"
-        upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
-        pull: cocoa-maze-runner-bitbar
-        run: cocoa-maze-runner-bitbar
-        service-ports: true
-        command:
-          - "--app=@/app/build/ipa_url_bb.txt"
-          - "--farm=bb"
-          - "--device=IOS_16"
-          - "--no-tunnel"
-          - "--aws-public-ip"
-          - "--fail-fast"
-          - "--exclude=features/[a-d].*.feature$"
     concurrency: 25
     concurrency_group: 'bitbar'
     concurrency_method: eager
