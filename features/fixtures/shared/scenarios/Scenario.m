@@ -279,7 +279,7 @@ static NSURLSessionUploadTask * uploadTaskWithRequest_fromData_completionHandler
     theScenario = [Scenario createScenarioNamed:scenarioName withConfig:nil];
     theScenario.eventMode = eventMode;
     
-    logInfo(@"%s: Starting scenario \"%@\"", __PRETTY_FUNCTION__, NSStringFromClass([self class]));
+    logInfo(@"%s: Starting scenario \"%@\"", __PRETTY_FUNCTION__, scenarioName);
     [theScenario startBugsnag];
 }
 
