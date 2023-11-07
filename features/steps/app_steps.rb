@@ -1,6 +1,3 @@
-When('I run {string}') do |scenario_name|
-  execute_command :run_scenario, scenario_name
-end
 
 When("I run {string} and relaunch the crashed app") do |event_type|
   steps %(
@@ -51,10 +48,34 @@ end
 #
 # Setting scenario mode
 #
+$scenario_mode = 0
 
-When('I set the app to {string} mode') do |mode|
-  $scenario_mode = mode
+class Counter
+  class << self
+    @count = 0
+    def count
+      @count
+    end
+    def count=(value)
+      @count = value
+    end
+  end
 end
+
+When('I set the count to 0') do
+  Counter.count = 0
+end
+
+When('I increment the count') do
+  Counter.count = Counter.count + 1
+end
+
+When('I run {string}') do |scenario_name|
+  $scenario_mode = Counter.count.to_s
+  $logger.info "$scenario_mode is now #{$scenario_mode}"
+  execute_command :run_scenario, scenario_name
+end
+
 
 #
 # https://appium.io/docs/en/commands/device/app/app-state/
