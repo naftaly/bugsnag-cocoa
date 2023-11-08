@@ -21,8 +21,13 @@ end
 When('I kill and relaunch the app') do
   case Maze::Helper.get_current_platform
   when 'ios'
-    Maze.driver.close_app
-    Maze.driver.launch_app
+    if Maze.config.farm == :bb
+      Maze.driver.terminate_app Maze.driver.app_id
+      Maze.driver.activate_app Maze.driver.app_id
+    else
+      Maze.driver.close_app
+      Maze.driver.launch_app
+    end
   when 'macos'
     # noop
   when 'watchos'
@@ -37,7 +42,11 @@ When("I relaunch the app after a crash") do
   when 'ios'
     # Wait for the app to stop running before relaunching
     step 'the app is not running'
-    Maze.driver.launch_app
+    if Maze.config.farm == :bb
+      Maze.driver.activate_app Maze.driver.app_id
+    else
+      Maze.driver.launch_app
+    end
   when 'macos'
     # Wait for the app to stop running before relaunching
     step 'the app is not running'
