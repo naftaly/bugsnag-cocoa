@@ -1,3 +1,26 @@
+GIT
+  remote: https://github.com/bugsnag/maze-runner
+  revision: c9f6c8ecbbe97b324ae1f2ce2c4903488cda0e4f
+  branch: main
+  specs:
+    bugsnag-maze-runner (9.0.0)
+      appium_lib (~> 12.0.0)
+      appium_lib_core (~> 5.4.0)
+      bugsnag (~> 6.24)
+      cucumber (~> 7.1)
+      cucumber-expressions (~> 6.0.0)
+      curb (~> 0.9.6)
+      dogstatsd-ruby (~> 5.5.0)
+      json_schemer (~> 0.2.24)
+      optimist (~> 3.0.1)
+      os (~> 1.0.0)
+      rack (~> 2.2)
+      rake (~> 12.3.3)
+      rubyzip (~> 2.3.2)
+      selenium-webdriver (~> 4.0)
+      test-unit (~> 3.5.2)
+      webrick (~> 1.7.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -23,23 +46,6 @@ GEM
     atomos (0.1.3)
     bugsnag (6.26.0)
       concurrent-ruby (~> 1.0)
-    bugsnag-maze-runner (8.8.0)
-      appium_lib (~> 12.0.0)
-      appium_lib_core (~> 5.4.0)
-      bugsnag (~> 6.24)
-      cucumber (~> 7.1)
-      cucumber-expressions (~> 6.0.0)
-      curb (~> 0.9.6)
-      dogstatsd-ruby (~> 5.5.0)
-      json_schemer (~> 0.2.24)
-      optimist (~> 3.0.1)
-      os (~> 1.0.0)
-      rack (~> 2.2)
-      rake (~> 12.3.3)
-      rubyzip (~> 2.3.2)
-      selenium-webdriver (~> 4.0)
-      test-unit (~> 3.5.2)
-      webrick (~> 1.7.0)
     builder (3.2.4)
     childprocess (4.1.0)
     claide (1.1.0)
@@ -155,7 +161,7 @@ GEM
     os (1.0.1)
     power_assert (2.0.3)
     public_suffix (4.0.7)
-    racc (1.7.1)
+    racc (1.7.3)
     rack (2.2.8)
     rake (12.3.3)
     regexp_parser (2.8.2)
@@ -201,7 +207,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
-  bugsnag-maze-runner (~> 8.8)
+  bugsnag-maze-runner!
   cocoapods
 
 BUNDLED WITH
