@@ -71,7 +71,7 @@ steps:
   - label: macOS 10.15 unit tests
     timeout_in_minutes: 10
     agents:
-      queue: macos-10.15
+      queue: ms-mac-10-15-1
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=macOS
     artifact_paths:
@@ -188,7 +188,7 @@ steps:
       - cocoa_fixture
     timeout_in_minutes: 60
     agents:
-      queue: macos-10.15
+      queue: ms-mac-10-15-1
     plugins:
       artifacts#v1.5.0:
         download: ["features/fixtures/macos/output/macOSTestApp.zip"]
