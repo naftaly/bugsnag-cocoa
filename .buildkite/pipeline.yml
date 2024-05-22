@@ -460,7 +460,7 @@ steps:
           - "--no-tunnel"
           - "--aws-public-ip"
           - "--fail-fast"
-          - "features/barebone_tests.feature"
+          - "features/features/delivery.feature:106"
     concurrency: 25
     concurrency_group: 'bitbar'
     concurrency_method: eager

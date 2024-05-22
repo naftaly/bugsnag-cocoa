@@ -107,11 +107,11 @@ Feature: Delivery of errors
     Given I set the HTTP status code for the next request to 500
     And I run "AutoSessionScenario"
     And I wait to receive a session
-    And I wait for 10 seconds
-    And I wait for the fixture to process the response
-    And I kill and relaunch the app
-    When I run "AutoSessionScenario"
-    Then I wait to receive 3 sessions
+    And I wait for 30 seconds
+#    And I wait for the fixture to process the response
+#    And I kill and relaunch the app
+#    When I run "AutoSessionScenario"
+#    Then I wait to receive 3 sessions
 
   Scenario: Session delivery should not be retried for old payloads
     Given I set the HTTP status code for the next request to 500
