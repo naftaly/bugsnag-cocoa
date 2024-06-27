@@ -321,10 +321,10 @@
 		AA21C54A2C2D8443001DD1BD /* HandledErrorThreadSendUnhandledOnlyScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 010BAAED2833CE560003FF36 /* HandledErrorThreadSendUnhandledOnlyScenario.m */; };
 		AA21C54C2C2D8443001DD1BD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DF442B2798044E00C31104 /* SystemConfiguration.framework */; };
 		AA21C54D2C2D8443001DD1BD /* libBugsnagNetworkRequestPluginStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42FF8F26F1EDB500E8D5D2 /* libBugsnagNetworkRequestPluginStatic.a */; };
-		AA21C54E2C2D8443001DD1BD /* libBugsnagStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CD103826690463007FA5F0 /* libBugsnagStatic.a */; };
 		AA21C5502C2D8443001DD1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8866C20404DD30003E444 /* LaunchScreen.storyboard */; };
 		AA21C5512C2D8443001DD1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8866A20404DD30003E444 /* Assets.xcassets */; };
 		AA21C5522C2D8443001DD1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8866720404DD30003E444 /* Main.storyboard */; };
+		AA21C55A2C2D8F87001DD1BD /* InfoXcFramework.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA21C5592C2D8F87001DD1BD /* InfoXcFramework.plist */; };
 		AA4C7F1529AEA0C4009B09A9 /* BugsnagWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C7F1429AEA0C4009B09A9 /* BugsnagWrapper.swift */; };
 		AA6ACD1C2773E0B3006464C4 /* UserFromConfigScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ACD1B2773E0B3006464C4 /* UserFromConfigScenario.swift */; };
 		AA6ACD202773E3F0006464C4 /* UserInfoScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ACD1F2773E3F0006464C4 /* UserInfoScenario.swift */; };
@@ -531,6 +531,7 @@
 		A1117E582535B29800014FDA /* OOMEnabledErrorTypesScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOMEnabledErrorTypesScenario.swift; sourceTree = "<group>"; };
 		A1117E5A2536036400014FDA /* OOMSessionScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOMSessionScenario.swift; sourceTree = "<group>"; };
 		AA21C5572C2D8443001DD1BD /* iOSTestAppXcFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestAppXcFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA21C5592C2D8F87001DD1BD /* InfoXcFramework.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoXcFramework.plist; sourceTree = "<group>"; };
 		AA4C7F1429AEA0C4009B09A9 /* BugsnagWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugsnagWrapper.swift; sourceTree = "<group>"; };
 		AA6ACD1B2773E0B3006464C4 /* UserFromConfigScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFromConfigScenario.swift; sourceTree = "<group>"; };
 		AA6ACD1F2773E3F0006464C4 /* UserInfoScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoScenario.swift; sourceTree = "<group>"; };
@@ -633,7 +634,6 @@
 			files = (
 				AA21C54C2C2D8443001DD1BD /* SystemConfiguration.framework in Frameworks */,
 				AA21C54D2C2D8443001DD1BD /* libBugsnagNetworkRequestPluginStatic.a in Frameworks */,
-				AA21C54E2C2D8443001DD1BD /* libBugsnagStatic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +666,7 @@
 				8AB8866320404DD30003E444 /* AppDelegate.swift */,
 				8AB8866A20404DD30003E444 /* Assets.xcassets */,
 				8AB8866F20404DD30003E444 /* Info.plist */,
+				AA21C5592C2D8F87001DD1BD /* InfoXcFramework.plist */,
 				8AB8866C20404DD30003E444 /* LaunchScreen.storyboard */,
 				8AB8866720404DD30003E444 /* Main.storyboard */,
 				8AB8866520404DD30003E444 /* ViewController.swift */,
@@ -987,6 +988,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA21C55A2C2D8F87001DD1BD /* InfoXcFramework.plist in Resources */,
 				AA21C5502C2D8443001DD1BD /* LaunchScreen.storyboard in Resources */,
 				AA21C5512C2D8443001DD1BD /* Assets.xcassets in Resources */,
 				AA21C5522C2D8443001DD1BD /* Main.storyboard in Resources */,
@@ -1670,7 +1672,7 @@
 					../../../Bugsnag,
 					../../../Bugsnag/Payload,
 				);
-				INFOPLIST_FILE = "iOSTestApp copy-Info.plist";
+				INFOPLIST_FILE = iOSTestApp/InfoXcFramework.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
@@ -1712,7 +1714,7 @@
 					../../../Bugsnag,
 					../../../Bugsnag/Payload,
 				);
-				INFOPLIST_FILE = "iOSTestApp copy-Info.plist";
+				INFOPLIST_FILE = iOSTestApp/InfoXcFramework.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
