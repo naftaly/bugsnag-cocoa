@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -325,6 +325,8 @@
 		AA21C5512C2D8443001DD1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8866A20404DD30003E444 /* Assets.xcassets */; };
 		AA21C5522C2D8443001DD1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8866720404DD30003E444 /* Main.storyboard */; };
 		AA21C55A2C2D8F87001DD1BD /* InfoXcFramework.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA21C5592C2D8F87001DD1BD /* InfoXcFramework.plist */; };
+		AA4228662C2DA74D001FCFCE /* Bugsnag.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4228652C2DA74D001FCFCE /* Bugsnag.xcframework */; };
+		AA4228672C2DA74D001FCFCE /* Bugsnag.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA4228652C2DA74D001FCFCE /* Bugsnag.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA4C7F1529AEA0C4009B09A9 /* BugsnagWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4C7F1429AEA0C4009B09A9 /* BugsnagWrapper.swift */; };
 		AA6ACD1C2773E0B3006464C4 /* UserFromConfigScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ACD1B2773E0B3006464C4 /* UserFromConfigScenario.swift */; };
 		AA6ACD202773E3F0006464C4 /* UserInfoScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6ACD1F2773E3F0006464C4 /* UserInfoScenario.swift */; };
@@ -406,6 +408,20 @@
 		F4295CEAD7C915EFA04898A5 /* Scenario.m in Sources */ = {isa = PBXBuildFile; fileRef = F42954E8B66F3FB7F5333CF7 /* Scenario.m */; };
 		F4295D19B9E67F5786011698 /* OverwriteLinkRegisterScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = F4295B041F9CC494473DD226 /* OverwriteLinkRegisterScenario.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA4228682C2DA74D001FCFCE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA4228672C2DA74D001FCFCE /* Bugsnag.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		001E5501243B8FDA0009E31D /* AutoCaptureRunScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCaptureRunScenario.m; sourceTree = "<group>"; };
@@ -532,6 +548,7 @@
 		A1117E5A2536036400014FDA /* OOMSessionScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOMSessionScenario.swift; sourceTree = "<group>"; };
 		AA21C5572C2D8443001DD1BD /* iOSTestAppXcFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestAppXcFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA21C5592C2D8F87001DD1BD /* InfoXcFramework.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoXcFramework.plist; sourceTree = "<group>"; };
+		AA4228652C2DA74D001FCFCE /* Bugsnag.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Bugsnag.xcframework; path = ../../../build/xcframeworks/products/Bugsnag.xcframework; sourceTree = "<group>"; };
 		AA4C7F1429AEA0C4009B09A9 /* BugsnagWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugsnagWrapper.swift; sourceTree = "<group>"; };
 		AA6ACD1B2773E0B3006464C4 /* UserFromConfigScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFromConfigScenario.swift; sourceTree = "<group>"; };
 		AA6ACD1F2773E3F0006464C4 /* UserInfoScenario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoScenario.swift; sourceTree = "<group>"; };
@@ -633,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA21C54C2C2D8443001DD1BD /* SystemConfiguration.framework in Frameworks */,
+				AA4228662C2DA74D001FCFCE /* Bugsnag.xcframework in Frameworks */,
 				AA21C54D2C2D8443001DD1BD /* libBugsnagNetworkRequestPluginStatic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +711,7 @@
 		D018DCE3210BCB4D0B8FA6D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA4228652C2DA74D001FCFCE /* Bugsnag.xcframework */,
 				01DF442B2798044E00C31104 /* SystemConfiguration.framework */,
 				CB42FF8F26F1EDB500E8D5D2 /* libBugsnagNetworkRequestPluginStatic.a */,
 				AAFEFA0226EB6B5A00980A10 /* BugsnagNetworkRequestPlugin.framework */,
@@ -924,6 +943,7 @@
 				AA21C54B2C2D8443001DD1BD /* Frameworks */,
 				AA21C54F2C2D8443001DD1BD /* Resources */,
 				AA21C5532C2D8443001DD1BD /* [Bugsnag] Upload dSYMs */,
+				AA4228682C2DA74D001FCFCE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1567,7 +1587,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1592,7 +1613,10 @@
 				);
 				INFOPLIST_FILE = iOSTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				OTHER_SWIFT_FLAGS = "-Onone";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
@@ -1634,7 +1658,10 @@
 				);
 				INFOPLIST_FILE = iOSTestApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_SWIFT_FLAGS = "-Onone";
@@ -1674,7 +1701,10 @@
 				);
 				INFOPLIST_FILE = iOSTestApp/InfoXcFramework.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				OTHER_SWIFT_FLAGS = "-Onone";
 				PRESERVE_DEAD_CODE_INITS_AND_TERMS = NO;
@@ -1716,7 +1746,10 @@
 				);
 				INFOPLIST_FILE = iOSTestApp/InfoXcFramework.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_SWIFT_FLAGS = "-Onone";
