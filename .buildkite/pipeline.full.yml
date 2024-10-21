@@ -12,7 +12,7 @@ steps:
     env:
       XCODE_VERSION: 15.3.0
     plugins:
-      - artifacts#v1.9.3:
+      - artifacts#v1.9.4:
           download: "Bugsnag.xcframework.zip"
           upload:
             - features/fixtures/ios/output/iOSTestAppXcFramework.ipa
@@ -41,10 +41,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/xcframework_ipa_url_bb.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -74,10 +74,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/xcframework_ipa_url_bb.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -110,10 +110,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -146,10 +146,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -180,10 +180,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -211,10 +211,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -242,10 +242,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -278,10 +278,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -313,10 +313,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -349,10 +349,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.9.3:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bb_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v4.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner-bitbar
         run: cocoa-maze-runner-bitbar
         service-ports: true
@@ -388,10 +388,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bs_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v3.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
         command:
@@ -423,10 +423,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bs_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v3.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
         command:
@@ -456,10 +456,10 @@ steps:
     agents:
       queue: opensource
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: "features/fixtures/ios/output/ipa_url_bs_release.txt"
         upload: "maze_output/failed/**/*"
-      docker-compose#v3.7.0:
+      docker-compose#v5.4.1:
         pull: cocoa-maze-runner
         run: cocoa-maze-runner
         command:
@@ -492,10 +492,10 @@ steps:
   #   agents:
   #     queue: opensource
   #   plugins:
-  #     artifacts#v1.5.0:
+  #     artifacts#v1.9.4:
   #       download: "features/fixtures/ios/output/ipa_url_bs_release.txt"
   #       upload: "maze_output/failed/**/*"
-  #     docker-compose#v3.7.0:
+  #     docker-compose#v5.4.1:
   #       pull: cocoa-maze-runner
   #       run: cocoa-maze-runner
   #       command:
@@ -524,7 +524,7 @@ steps:
     agents:
       queue: macos-13-arm
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: "features/fixtures/macos/output/macOSTestApp_Release.zip"
         upload:
           - "macOSTestApp.log"
@@ -547,7 +547,7 @@ steps:
     agents:
       queue: macos-12-arm
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: "features/fixtures/macos/output/macOSTestApp_Release.zip"
         upload:
           - "macOSTestApp.log"
@@ -570,7 +570,7 @@ steps:
     agents:
       queue: macos-11
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: ["features/fixtures/macos/output/macOSTestApp_Release.zip"]
         upload: ["macOSTestApp.log", "maze_output/failed/**/*"]
       test-collector#v1.10.2:
@@ -591,7 +591,7 @@ steps:
     agents:
       queue: macos-10.15
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: ["features/fixtures/macos/output/macOSTestApp_Release.zip"]
         upload: ["macOSTestApp.log", "maze_output/failed/**/*"]
     commands:
@@ -608,7 +608,7 @@ steps:
     agents:
       queue: opensource-mac-cocoa-10.14
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: ["features/fixtures/macos/output/macOSTestApp_Release.zip"]
         upload: ["macOSTestApp.log", "maze_output/failed/**/*"]
     commands:
@@ -625,7 +625,7 @@ steps:
     agents:
       queue: opensource-mac-cocoa-10.13
     plugins:
-      artifacts#v1.5.0:
+      artifacts#v1.9.4:
         download: ["features/fixtures/macos/output/macOSTestApp_Release.zip"]
         upload: ["macOSTestApp.log", "maze_output/failed/**/*"]
     commands:
