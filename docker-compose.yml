@@ -24,11 +24,15 @@ x-common-environment: &common-environment
 
 services:
   cocoa-maze-runner:
-    image: 855461928731.dkr.ecr.us-west-1.amazonaws.com/maze-runner-releases:latest-v9-cli
+    image: 855461928731.dkr.ecr.us-west-1.amazonaws.com/maze-runner:integration-hackathon-2024-cli
     environment:
       <<: *common-environment
       BROWSER_STACK_USERNAME:
       BROWSER_STACK_ACCESS_KEY:
+      MAZE_REPEATER_API_KEY:
+      MAZE_BUGSNAG_DATA_ACCESS_API_ENDPOINT:
+      MAZE_BUGSNAG_DATA_ACCESS_API_KEY:
+      MAZE_BUGSNAG_DATA_ACCESS_PROJECT_ID:
     volumes:
       - ./features/fixtures/ios/output:/app/build
       - ./features/:/app/features/
