@@ -145,7 +145,7 @@ steps:
     agents:
       queue: macos-13-arm
     commands:
-      - ./scripts/run-unit-tests.sh PLATFORM=iOS OS=15.5
+      - ./scripts/run-unit-tests.sh PLATFORM=iOS OS=15.0
     artifact_paths:
       - logs/*
 
