@@ -13,7 +13,7 @@ steps:
     agents:
       queue: macos-14
     env:
-      XCODE_VERSION: 15.3.0
+      XCODE_VERSION: 15.4.0
     commands:
       - make build_xcframework
       - make build_swift
@@ -29,7 +29,7 @@ steps:
     agents:
       queue: macos-14
     env:
-      XCODE_VERSION: 15.3.0
+      XCODE_VERSION: 15.4.0
     artifact_paths:
       - features/fixtures/ios/output/iOSTestApp_Release.ipa
       - features/fixtures/ios/output/iOSTestApp_Debug.ipa
@@ -51,6 +51,8 @@ steps:
     timeout_in_minutes: 15
     agents:
       queue: macos-14
+    env:
+      XCODE_VERSION: 15.4.0
     commands:
       - ./scripts/build-carthage.sh
     plugins:
@@ -66,6 +68,8 @@ steps:
     timeout_in_minutes: 10
     agents:
       queue: macos-14
+    env:
+      XCODE_VERSION: 15.4.0
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=macOS
     artifact_paths:
@@ -132,23 +136,23 @@ steps:
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=iOS OS=17.0.1 DEVICE="iPhone 15"
     env:
-      XCODE_VERSION: 15.3.0
+      XCODE_VERSION: 15.4.0
     artifact_paths:
       - logs/*
 
   - label: iOS 15 unit tests
     timeout_in_minutes: 10
     agents:
-      queue: macos-12-arm
+      queue: macos-13-arm
     commands:
-      - ./scripts/run-unit-tests.sh PLATFORM=iOS OS=15.0
+      - ./scripts/run-unit-tests.sh PLATFORM=iOS OS=15.5
     artifact_paths:
       - logs/*
 
   - label: iOS 14 unit tests
     timeout_in_minutes: 10
     agents:
-      queue: macos-12-arm
+      queue: macos-13-arm
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=iOS OS=14.5
     artifact_paths:
@@ -157,7 +161,7 @@ steps:
   - label: tvOS 15 unit tests
     timeout_in_minutes: 10
     agents:
-      queue: macos-12-arm
+      queue: macos-13-arm
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=tvOS OS=15.0
     artifact_paths:
@@ -166,7 +170,7 @@ steps:
   - label: tvOS 14 unit tests
     timeout_in_minutes: 10
     agents:
-      queue: macos-12-arm
+      queue: macos-13-arm
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=tvOS OS=14.5
     artifact_paths:
@@ -177,7 +181,7 @@ steps:
     agents:
       queue: macos-14
     env:
-      XCODE_VERSION: 15.3.0
+      XCODE_VERSION: 15.4.0
     commands:
       - ./scripts/run-unit-tests.sh PLATFORM=watchOS OS=8.5 SDK=watchsimulator10.4
     artifact_paths:
@@ -186,7 +190,7 @@ steps:
   - label: watchOS 7 unit tests
     timeout_in_minutes: 60
     agents:
-      queue: macos-12-arm
+      queue: macos-13-arm
     env:
       DEVELOPER_DIR: /Applications/Xcode14.0.app
     commands:
@@ -200,6 +204,8 @@ steps:
     timeout_in_minutes: 60
     agents:
       queue: macos-14
+    env:
+      XCODE_VERSION: 15.4.0
     plugins:
       artifacts#v1.5.0:
         download: "features/fixtures/macos/output/macOSTestApp_Release.zip"
@@ -693,6 +699,8 @@ steps:
     timeout_in_minutes: 10
     agents:
       queue: macos-14
+    env:
+      XCODE_VERSION: 15.4.0
     plugins:
       artifacts#v1.5.0:
         download: "features/fixtures/macos/output/macOSTestApp_Debug.zip"
